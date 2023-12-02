@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #7a8dfd;
+  --border-color: #dde2ff;
+}
+body {
+  margin: 0;
+  font-size: large;
+  font-family: "Roboto", sans-serif;
+}
+.todo-app {
+  background-color: #f2f3fc;
+  height: 100vh;
+}
+
+header {
+  padding: 0 4rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.todo-app__header {
+  height: 72px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding__title {
+  color: var(--primary-color);
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search__icon {
+  cursor: pointer;
+}
+.search__box {
+  display: none;
+  transition: all 0.3s ease;
+}
+.search__box input {
+  padding: 5px;
+  border: none;
+  border-radius: 0.25rem;
+  width: 0;
+}
+
+.show-search-box .search__box {
+  display: block;
+}
+
+.show-search-box .search__box input {
+  width: 16rem;
+  height: 1rem;
+}
+
+.task-container {
+  margin: 0;
+  padding: 0 64px;
+}
+.task-container__add-button {
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  display: block;
+}
+
+.task-container__filter {
+  display: flex;
+  justify-content: end;
+}
+
+#filter {
+  width: 20%;
+}
+
+.task-item__card1-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.errorText {
+  color: red;
+}
+
+.task-container__task-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.task-container__task-item {
+  padding: 1rem;
+  align-items: center;
+  width: 32rem;
+  height: 163px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.task-item__created-time {
+  font-size: 14px;
+  color: #bbbdd0;
+  display: block;
+}
+
+.task-item__edit-input,
+.task-item__input {
+  height: 5rem;
+  width: 30rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  display: block;
+}
+
+input:focus {
+  outline: none;
+  border-color: #7a8dfd;
+  box-shadow: 0 0 5px rgba(122, 141, 253, 0.5);
+}
+
+.task-item__done {
+  text-decoration: line-through #0bc375;
+  color: #0bc375;
+}
+
+.task-item__completion-badge {
+  border: #7a8dfd;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  text-align: left;
+  background-color: #7a8dfd;
+  padding: 0.5rem;
+  margin-left: 3rem;
+}
+
+.task-item__button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.task-item__button {
+  margin: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.searchButtonStyle {
+  margin: 0.5rem;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #000000;
+}
+
+input[type="text"] {
+  padding: 0.25rem;
+  margin: 0.25rem 0;
+  border: 0.05rem solid #ccc;
+  border-radius: 0.25rem;
+}
